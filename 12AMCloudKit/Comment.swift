@@ -7,13 +7,61 @@
 //
 
 import Foundation
+import CloudKit
+import UIKit
 
 class Comment {
     
     static let typeKey = "Comment"
     static let textKey = "text"
     static let timestampKey = "timestamp"
+    static let postKey = "post"
+    static let postReferenceKey = "photoReference"
+    static let ownerReferenceKey = "ownerReference"
     
     var text: String
     var timestamp: String
+    var post: Post?
+    var postReference: CKReference
+    var owner: User?
+    var ownerReference: CKReference
+    var cloudKitRecordID: CKRecordID?
+    
+    var recordType: String {
+        return Comment.typeKey
+    }
+    
+    init(text: String, timestamp: String = Date().description(with: Locale.current), post: Post?, postReference: CKReference, ownerReference: CKReference) {
+        self.text = text
+        self.timestamp = timestamp
+        self.post = post
+        self.postReference = postReference
+        self.ownerReference = ownerReference
+    }
+    
+    convenience required init?(record: CKRecord) {
+        guard let timestamp = record.creationDate?.description(with: Locale.current),
+            let text = record[Comment.textKey] as? String,
+            let postReference = record[Comment.postReferenceKey] as? CKReference,
+            let ownerReference = record[Comment.ownerReferenceKey] as? CKReference else { return nil }
+        
+        self.init(text: text, timestamp: timestamp, post: nil, postReference: postReference, ownerReference: ownerReference)
+        
+        cloudKitRecordID = record.recordID
+    }
+}
+
+extension CKRecord {
+    
+    convenience init(_ comment: Comment) {
+        guard let post = comment.post else {
+            fatalError("Comment does not have a Post relationship")
+        }
+        let recordID = CKRecordID(recordName: UUID().uuidString)
+        self.init(recordType: comment.recordType, recordID: recordID)
+        self.setValue(comment.text, forKey: Comment.textKey)
+        self.setValue(comment.timestamp, forKey: Comment.timestampKey)
+        self.setValue(post.cloudKitReference, forKey: Comment.postReferenceKey)
+        self.setValue(comment.ownerReference, forKey: Comment.ownerReferenceKey)
+    }
 }
