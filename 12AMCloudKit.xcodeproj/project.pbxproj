@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		01633E1A1EF865B500381B8E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01633E191EF865B500381B8E /* CloudKit.framework */; };
+		01633E1C1EF86E1D00381B8E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E1B1EF86E1D00381B8E /* Post.swift */; };
+		01633E1E1EF8731F00381B8E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E1D1EF8731F00381B8E /* Comment.swift */; };
 		01B7CB311EF8626700C7504B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7CB301EF8626700C7504B /* AppDelegate.swift */; };
 		01B7CB361EF8626700C7504B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B7CB341EF8626700C7504B /* Main.storyboard */; };
 		01B7CB381EF8626700C7504B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7CB371EF8626700C7504B /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		01633E171EF865B300381B8E /* 12AMCloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 12AMCloudKit.entitlements; sourceTree = "<group>"; };
 		01633E191EF865B500381B8E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		01633E1B1EF86E1D00381B8E /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		01633E1D1EF8731F00381B8E /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		01B7CB2D1EF8626700C7504B /* 12AMCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 12AMCloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7CB301EF8626700C7504B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B7CB351EF8626700C7504B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				01B7CB491EF8638900C7504B /* User.swift */,
+				01633E1B1EF86E1D00381B8E /* Post.swift */,
+				01633E1D1EF8731F00381B8E /* Comment.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -217,8 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01633E1C1EF86E1D00381B8E /* Post.swift in Sources */,
 				01B7CB4A1EF8638900C7504B /* User.swift in Sources */,
 				01B7CB311EF8626700C7504B /* AppDelegate.swift in Sources */,
+				01633E1E1EF8731F00381B8E /* Comment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
