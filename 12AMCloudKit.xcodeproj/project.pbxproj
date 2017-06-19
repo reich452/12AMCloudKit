@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01633E1A1EF865B500381B8E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01633E191EF865B500381B8E /* CloudKit.framework */; };
 		01B7CB311EF8626700C7504B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7CB301EF8626700C7504B /* AppDelegate.swift */; };
 		01B7CB361EF8626700C7504B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B7CB341EF8626700C7504B /* Main.storyboard */; };
 		01B7CB381EF8626700C7504B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7CB371EF8626700C7504B /* Assets.xcassets */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01633E171EF865B300381B8E /* 12AMCloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 12AMCloudKit.entitlements; sourceTree = "<group>"; };
+		01633E191EF865B500381B8E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		01B7CB2D1EF8626700C7504B /* 12AMCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 12AMCloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7CB301EF8626700C7504B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B7CB351EF8626700C7504B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,12 +32,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01633E1A1EF865B500381B8E /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01633E181EF865B500381B8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01633E191EF865B500381B8E /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		01B7CB241EF8626700C7504B = {
 			isa = PBXGroup;
 			children = (
@@ -42,6 +54,7 @@
 				01B7CB461EF8630A00C7504B /* Helper Files */,
 				01B7CB451EF862E300C7504B /* Resources */,
 				01B7CB2E1EF8626700C7504B /* Products */,
+				01633E181EF865B500381B8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +107,7 @@
 				01B7CB371EF8626700C7504B /* Assets.xcassets */,
 				01B7CB391EF8626700C7504B /* LaunchScreen.storyboard */,
 				01B7CB3C1EF8626700C7504B /* Info.plist */,
+				01633E171EF865B300381B8E /* 12AMCloudKit.entitlements */,
 			);
 			name = Resources;
 			path = 12AMCloudKit;
@@ -154,7 +168,16 @@
 				TargetAttributes = {
 					01B7CB2C1EF8626700C7504B = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = WAN4D79W79;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -320,6 +343,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 12AMCloudKit/12AMCloudKit.entitlements;
+				DEVELOPMENT_TEAM = WAN4D79W79;
 				INFOPLIST_FILE = 12AMCloudKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wesstpeak.-2AMCloudKit";
@@ -332,6 +357,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 12AMCloudKit/12AMCloudKit.entitlements;
+				DEVELOPMENT_TEAM = WAN4D79W79;
 				INFOPLIST_FILE = 12AMCloudKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wesstpeak.-2AMCloudKit";
@@ -359,6 +386,7 @@
 				01B7CB411EF8626700C7504B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
