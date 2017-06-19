@@ -10,6 +10,8 @@
 		01633E1A1EF865B500381B8E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01633E191EF865B500381B8E /* CloudKit.framework */; };
 		01633E1C1EF86E1D00381B8E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E1B1EF86E1D00381B8E /* Post.swift */; };
 		01633E1E1EF8731F00381B8E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E1D1EF8731F00381B8E /* Comment.swift */; };
+		01633E211EF881D200381B8E /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E201EF881D200381B8E /* UserController.swift */; };
+		01633E231EF8868500381B8E /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E221EF8868500381B8E /* CloudKitManager.swift */; };
 		01B7CB311EF8626700C7504B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7CB301EF8626700C7504B /* AppDelegate.swift */; };
 		01B7CB361EF8626700C7504B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B7CB341EF8626700C7504B /* Main.storyboard */; };
 		01B7CB381EF8626700C7504B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7CB371EF8626700C7504B /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 		01633E191EF865B500381B8E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		01633E1B1EF86E1D00381B8E /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		01633E1D1EF8731F00381B8E /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		01633E201EF881D200381B8E /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		01633E221EF8868500381B8E /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		01B7CB2D1EF8626700C7504B /* 12AMCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 12AMCloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7CB301EF8626700C7504B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B7CB351EF8626700C7504B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		01633E1F1EF8810300381B8E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				01B7CB441EF862D600C7504B /* View Controller */,
+				01B7CB431EF862CF00C7504B /* Model Controller */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		01B7CB241EF8626700C7504B = {
 			isa = PBXGroup;
 			children = (
@@ -75,8 +88,7 @@
 			children = (
 				01B7CB471EF8632100C7504B /* Storyboard */,
 				01B7CB481EF8633400C7504B /* View Cells */,
-				01B7CB441EF862D600C7504B /* View Controller */,
-				01B7CB431EF862CF00C7504B /* Model Controller */,
+				01633E1F1EF8810300381B8E /* Controllers */,
 				01B7CB421EF862C700C7504B /* Model */,
 			);
 			path = 12AMCloudKit;
@@ -95,6 +107,8 @@
 		01B7CB431EF862CF00C7504B /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				01633E201EF881D200381B8E /* UserController.swift */,
+				01633E221EF8868500381B8E /* CloudKitManager.swift */,
 			);
 			name = "Model Controller";
 			sourceTree = "<group>";
@@ -225,6 +239,8 @@
 			files = (
 				01633E1C1EF86E1D00381B8E /* Post.swift in Sources */,
 				01B7CB4A1EF8638900C7504B /* User.swift in Sources */,
+				01633E231EF8868500381B8E /* CloudKitManager.swift in Sources */,
+				01633E211EF881D200381B8E /* UserController.swift in Sources */,
 				01B7CB311EF8626700C7504B /* AppDelegate.swift in Sources */,
 				01633E1E1EF8731F00381B8E /* Comment.swift in Sources */,
 			);
