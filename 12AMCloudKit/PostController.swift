@@ -133,7 +133,6 @@ class PostController {
         //
         //                        }
         
-        
         guard let predicate2 = predicate else { return }
         
         cloudKitManager.fetchRecordsWithType(type, predicate: predicate2, recordFetchedBlock: nil) { (records, error) in
