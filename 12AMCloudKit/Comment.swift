@@ -10,7 +10,7 @@ import Foundation
 import CloudKit
 import UIKit
 
-class Comment {
+class Comment: CloudKitSyncable {
     
     static let typeKey = "Comment"
     static let textKey = "text"

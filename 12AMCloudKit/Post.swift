@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CloudKit
 
-class Post {
+class Post: CloudKitSyncable {
     
     static let typeKey = "Post"
     static let photoDataKey = "photoData"
@@ -63,7 +63,7 @@ class Post {
         return fileURL
     }
     
-    init?(record: CKRecord) {
+    required init?(record: CKRecord) {
         guard let timestamp = record[Post.timestampKey] as? Date,
             let text = record[Post.textKey] as? String,
             let photoAsset = record[Post.photoDataKey] as? CKAsset,

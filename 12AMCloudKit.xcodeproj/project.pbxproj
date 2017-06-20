@@ -12,6 +12,10 @@
 		01633E1E1EF8731F00381B8E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E1D1EF8731F00381B8E /* Comment.swift */; };
 		01633E211EF881D200381B8E /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E201EF881D200381B8E /* UserController.swift */; };
 		01633E231EF8868500381B8E /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E221EF8868500381B8E /* CloudKitManager.swift */; };
+		01633E251EF895C300381B8E /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E241EF895C300381B8E /* PostController.swift */; };
+		01633E281EF9722700381B8E /* CloudKitSyncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E271EF9722700381B8E /* CloudKitSyncable.swift */; };
+		01633E2A1EF9786200381B8E /* TimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E291EF9786200381B8E /* TimeTracker.swift */; };
+		01633E2C1EF978A400381B8E /* TimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E2B1EF978A400381B8E /* TimerExtension.swift */; };
 		01B7CB311EF8626700C7504B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7CB301EF8626700C7504B /* AppDelegate.swift */; };
 		01B7CB361EF8626700C7504B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B7CB341EF8626700C7504B /* Main.storyboard */; };
 		01B7CB381EF8626700C7504B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7CB371EF8626700C7504B /* Assets.xcassets */; };
@@ -26,6 +30,10 @@
 		01633E1D1EF8731F00381B8E /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		01633E201EF881D200381B8E /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		01633E221EF8868500381B8E /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		01633E241EF895C300381B8E /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		01633E271EF9722700381B8E /* CloudKitSyncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitSyncable.swift; sourceTree = "<group>"; };
+		01633E291EF9786200381B8E /* TimeTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTracker.swift; sourceTree = "<group>"; };
+		01633E2B1EF978A400381B8E /* TimerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerExtension.swift; sourceTree = "<group>"; };
 		01B7CB2D1EF8626700C7504B /* 12AMCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 12AMCloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7CB301EF8626700C7504B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B7CB351EF8626700C7504B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,10 +72,20 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		01633E261EF9710500381B8E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				01633E271EF9722700381B8E /* CloudKitSyncable.swift */,
+			);
+			name = Protocols;
+			path = 12AMCloudKit;
+			sourceTree = "<group>";
+		};
 		01B7CB241EF8626700C7504B = {
 			isa = PBXGroup;
 			children = (
 				01B7CB2F1EF8626700C7504B /* 12AMCloudKit */,
+				01633E261EF9710500381B8E /* Protocols */,
 				01B7CB461EF8630A00C7504B /* Helper Files */,
 				01B7CB451EF862E300C7504B /* Resources */,
 				01B7CB2E1EF8626700C7504B /* Products */,
@@ -108,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				01633E201EF881D200381B8E /* UserController.swift */,
+				01633E241EF895C300381B8E /* PostController.swift */,
 				01633E221EF8868500381B8E /* CloudKitManager.swift */,
 			);
 			name = "Model Controller";
@@ -136,6 +155,8 @@
 		01B7CB461EF8630A00C7504B /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
+				01633E291EF9786200381B8E /* TimeTracker.swift */,
+				01633E2B1EF978A400381B8E /* TimerExtension.swift */,
 			);
 			name = "Helper Files";
 			path = 12AMCloudKit;
@@ -238,9 +259,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				01633E1C1EF86E1D00381B8E /* Post.swift in Sources */,
+				01633E281EF9722700381B8E /* CloudKitSyncable.swift in Sources */,
 				01B7CB4A1EF8638900C7504B /* User.swift in Sources */,
 				01633E231EF8868500381B8E /* CloudKitManager.swift in Sources */,
 				01633E211EF881D200381B8E /* UserController.swift in Sources */,
+				01633E2A1EF9786200381B8E /* TimeTracker.swift in Sources */,
+				01633E251EF895C300381B8E /* PostController.swift in Sources */,
+				01633E2C1EF978A400381B8E /* TimerExtension.swift in Sources */,
 				01B7CB311EF8626700C7504B /* AppDelegate.swift in Sources */,
 				01633E1E1EF8731F00381B8E /* Comment.swift in Sources */,
 			);
