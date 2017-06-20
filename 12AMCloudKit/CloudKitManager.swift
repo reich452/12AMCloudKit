@@ -13,7 +13,6 @@ import CloudKit
 private let CreatorUserRecordIDKey = "creatorUserRecordID"
 private let CreationDateKey = "creationDate"
 
-
 class CloudKitManager {
     
     static let shared = CloudKitManager()

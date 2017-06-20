@@ -437,10 +437,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.15000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2G-4e-qBV" userLabel="particles">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" red="0.1960784314" green="0.1764705882" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
-                            </sceneKitView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5J-Fi-hh0" customClass="ImageTextField" customModule="_2AMCloudKit" customModuleProvider="target">
                                 <rect key="frame" x="16" y="269" width="343" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -455,7 +451,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
                                         <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="user"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="userIcon"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
@@ -543,9 +539,6 @@
                             <constraint firstItem="X5J-Fi-hh0" firstAttribute="leading" secondItem="Cb3-Ez-DCH" secondAttribute="leading" id="H3d-DP-hlM"/>
                             <constraint firstItem="Cpz-W6-pcF" firstAttribute="trailing" secondItem="Cb3-Ez-DCH" secondAttribute="trailing" id="IAg-u1-Dyr"/>
                             <constraint firstItem="jDd-hS-qKu" firstAttribute="leading" secondItem="X5J-Fi-hh0" secondAttribute="leading" id="P39-Ih-ln4"/>
-                            <constraint firstItem="I2G-4e-qBV" firstAttribute="top" secondItem="Bb3-9s-KKn" secondAttribute="bottom" id="PJx-Lk-eL4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="I2G-4e-qBV" secondAttribute="trailing" constant="-16" id="PbE-7l-m6o"/>
-                            <constraint firstItem="I2G-4e-qBV" firstAttribute="leading" secondItem="qaN-S8-AIL" secondAttribute="leadingMargin" constant="-16" id="Pph-f5-b2F"/>
                             <constraint firstItem="X5J-Fi-hh0" firstAttribute="leading" secondItem="qaN-S8-AIL" secondAttribute="leadingMargin" id="Qbf-Do-nb2"/>
                             <constraint firstItem="Jlu-wn-Pdi" firstAttribute="top" secondItem="re1-q9-eUz" secondAttribute="top" constant="-4" id="Sh6-lG-kSP"/>
                             <constraint firstItem="re1-q9-eUz" firstAttribute="centerX" secondItem="X5J-Fi-hh0" secondAttribute="centerX" id="UMn-Fj-1Gp"/>
@@ -554,7 +547,6 @@
                             <constraint firstItem="X5J-Fi-hh0" firstAttribute="trailing" secondItem="Cb3-Ez-DCH" secondAttribute="trailing" id="j9j-Ym-hbb"/>
                             <constraint firstItem="Jlu-wn-Pdi" firstAttribute="top" secondItem="Bb3-9s-KKn" secondAttribute="bottom" constant="54" id="k2e-B0-JGw"/>
                             <constraint firstItem="Jlu-wn-Pdi" firstAttribute="bottom" secondItem="re1-q9-eUz" secondAttribute="bottom" constant="4" id="l5E-Wv-wLT"/>
-                            <constraint firstItem="oVt-a9-aXX" firstAttribute="top" secondItem="I2G-4e-qBV" secondAttribute="bottom" id="lmy-rJ-WDb"/>
                             <constraint firstItem="1Vn-Z7-D0F" firstAttribute="top" secondItem="Cb3-Ez-DCH" secondAttribute="bottom" constant="66" id="pPb-06-N23"/>
                             <constraint firstItem="Cb3-Ez-DCH" firstAttribute="top" secondItem="X5J-Fi-hh0" secondAttribute="bottom" constant="24" id="qJq-vD-SBB"/>
                             <constraint firstItem="jDd-hS-qKu" firstAttribute="trailing" secondItem="X5J-Fi-hh0" secondAttribute="trailing" id="qRE-e0-Fkv"/>
@@ -562,15 +554,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="Cb3-Ez-DCH" id="hXp-lz-EUs"/>
-                        <outlet property="loginView" destination="qaN-S8-AIL" id="2AP-L5-hmO"/>
-                        <outlet property="particles" destination="I2G-4e-qBV" id="o56-UQ-kK3"/>
+                        <outlet property="loginView" destination="qaN-S8-AIL" id="DOS-W4-STp"/>
                         <outlet property="profileImageButton" destination="Jlu-wn-Pdi" id="NKs-Sj-zBQ"/>
                         <outlet property="profileImageCenterConstraint" destination="UMn-Fj-1Gp" id="JbB-24-4JJ"/>
                         <outlet property="profileImageView" destination="re1-q9-eUz" id="lkf-op-KSA"/>
                         <outlet property="signUpButton" destination="1Vn-Z7-D0F" id="495-D4-Qte"/>
                         <outlet property="signUpButtonCenterXContstraint" destination="7oZ-6Q-UkT" id="8H9-bg-Bw1"/>
-                        <outlet property="userNameTextField" destination="X5J-Fi-hh0" id="UZ7-wx-uMr"/>
+                        <outlet property="userNameTextField" destination="X5J-Fi-hh0" id="3NJ-zf-kP8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brb-9u-G7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -585,7 +575,7 @@
         <image name="email" width="64" height="64"/>
         <image name="forwardArrow" width="44" height="44"/>
         <image name="plussButton" width="84" height="84"/>
-        <image name="user" width="16" height="16"/>
+        <image name="userIcon" width="73" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JlA-Hd-plg"/>
