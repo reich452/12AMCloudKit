@@ -17,6 +17,7 @@
 		01633E2A1EF9786200381B8E /* TimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E291EF9786200381B8E /* TimeTracker.swift */; };
 		01633E2C1EF978A400381B8E /* TimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E2B1EF978A400381B8E /* TimerExtension.swift */; };
 		01633E591EF9B39B00381B8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E581EF9B39B00381B8E /* LoginViewController.swift */; };
+		01633E5B1EF9B40800381B8E /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E5A1EF9B40800381B8E /* FeedTableViewController.swift */; };
 		01B7CB311EF8626700C7504B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7CB301EF8626700C7504B /* AppDelegate.swift */; };
 		01B7CB361EF8626700C7504B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B7CB341EF8626700C7504B /* Main.storyboard */; };
 		01B7CB381EF8626700C7504B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7CB371EF8626700C7504B /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		01633E291EF9786200381B8E /* TimeTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTracker.swift; sourceTree = "<group>"; };
 		01633E2B1EF978A400381B8E /* TimerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerExtension.swift; sourceTree = "<group>"; };
 		01633E581EF9B39B00381B8E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		01633E5A1EF9B40800381B8E /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		01B7CB2D1EF8626700C7504B /* 12AMCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 12AMCloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7CB301EF8626700C7504B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B7CB351EF8626700C7504B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				01633E581EF9B39B00381B8E /* LoginViewController.swift */,
+				01633E5A1EF9B40800381B8E /* FeedTableViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				01633E211EF881D200381B8E /* UserController.swift in Sources */,
 				01633E2A1EF9786200381B8E /* TimeTracker.swift in Sources */,
 				01633E251EF895C300381B8E /* PostController.swift in Sources */,
+				01633E5B1EF9B40800381B8E /* FeedTableViewController.swift in Sources */,
 				01633E2C1EF978A400381B8E /* TimerExtension.swift in Sources */,
 				01B7CB311EF8626700C7504B /* AppDelegate.swift in Sources */,
 				01633E1E1EF8731F00381B8E /* Comment.swift in Sources */,
