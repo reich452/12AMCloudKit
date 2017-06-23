@@ -17,12 +17,11 @@ extension PostController {
 
 class PostController {
     
-    static let shared = PostController()
+    static let sharedController = PostController()
     
     var cloudKitManager = CloudKitManager()
     var posts: [Post] = []
     var comments: [Comment] = []
-    
     var isSyncing: Bool = false
     
     var filteredPosts: [Post] {
@@ -102,10 +101,10 @@ class PostController {
     func fetchNewRecords(ofType type: String, completion: @escaping (() -> Void) = { _ in }) {
         
         var referencesToExclude = [CKReference]()
-        let midnight = TimeTracker.shared.midnight.timeIntervalSince1970
-        let midnightDate = NSDate(timeIntervalSince1970: midnight)
-        let oneAM = TimeTracker.shared.midnight.timeIntervalSince1970 + 3600
-        let oneAMDate = NSDate(timeIntervalSince1970: oneAM)
+//        let midnight = TimeTracker.shared.midnight.timeIntervalSince1970
+//        let midnightDate = NSDate(timeIntervalSince1970: midnight)
+//        let oneAM = TimeTracker.shared.midnight.timeIntervalSince1970 + 3600
+//        let oneAMDate = NSDate(timeIntervalSince1970: oneAM)
         
         var predicate: NSPredicate?
         if type == "User"{
@@ -182,7 +181,6 @@ class PostController {
     }
     
     func performFullSync(completion: @escaping (() -> Void) = { _ in }) {
-        
         isSyncing = true
         
         self.fetchNewRecords(ofType: User.typeKey) {
@@ -199,7 +197,6 @@ class PostController {
     }
     
     func requestFullSync(_ completion: (() -> Void)? = nil) {
-        
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         self.performFullSync {

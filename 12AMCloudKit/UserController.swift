@@ -16,6 +16,7 @@ class UserController {
     
     let publicDB = CKContainer.default().publicCloudDatabase
     let privateDB = CKContainer.default().privateCloudDatabase
+    let currentUserWasSentNotification = Notification.Name("currentUserWasSet")
     
     var appleUserRecordID: CKRecordID?
     var blockUserRef: [CKReference]? = []
@@ -46,25 +47,28 @@ class UserController {
         }
     }
     
-    func createUser(with userName: String, email: String, profileImage: UIImage?, blockUserRef: [CKReference]? = [], completion: @escaping (User?) -> Void) {
-        CKContainer.default().fetchUserRecordID { (recordID, error) in
-            guard let recordID = recordID, error == nil else {
-                print("Error creating recordID \(String(describing: error?.localizedDescription))"); return }
-            let appleUserRef = CKReference(recordID: recordID, action: .deleteSelf)
+    func createUser(with userName: String, email: String, profileImage: UIImage?, blockedUserRef: [CKReference]? = [], completion: @escaping (User?) -> Void) {
+        CKContainer.default().fetchUserRecordID { recordId, error in
+            guard let recordId = recordId, error == nil else {
+                print("Error creating recordId \(String(describing: error?.localizedDescription))"); return }
+            self.appleUserRecordID = recordId
+            let appleUserRef = CKReference(recordID: recordId, action: .deleteSelf)
             guard let blockUserRef = self.blockUserRef else { return }
             
             let user = User(username: userName, email: email, profileImage: profileImage, appleUserRef: appleUserRef, blockUserRefs: blockUserRef)
             let userRecord = CKRecord(user: user)
             
-            self.publicDB.save(userRecord, completionHandler: { (record, error) in
+            self.publicDB.save(userRecord) { (record, error) in
                 if let record = record, error == nil {
                     let currentUser = User(cloudKitRecord: record)
+                    self.currentUser = currentUser
                     completion(currentUser)
-                    print("Success creaing a user")
+                    
+                    print("Success creating user")
                 } else {
-                    print ("Error saving user record: \(String(describing: error?.localizedDescription))")
+                    print( "Error saving user record:\(String(describing: error?.localizedDescription))")
                 }
-            })
+            }
         }
     }
     

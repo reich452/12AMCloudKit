@@ -24,6 +24,14 @@
 		01633E631EF9B58700381B8E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E621EF9B58700381B8E /* PostTableViewCell.swift */; };
 		01633E651EF9B63800381B8E /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E641EF9B63800381B8E /* PostDetailTableViewController.swift */; };
 		01633E681EF9BBA600381B8E /* ImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E671EF9BBA600381B8E /* ImageTextField.swift */; };
+		01633E6C1EF9CA3F00381B8E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E6B1EF9CA3F00381B8E /* StringExtensions.swift */; };
+		01633E6E1EF9CA7200381B8E /* UICollorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E6D1EF9CA7200381B8E /* UICollorHelper.swift */; };
+		01633E701EF9CCD300381B8E /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E6F1EF9CCD300381B8E /* CameraController.swift */; };
+		01633E721EF9D1F300381B8E /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E711EF9D1F300381B8E /* CustomTabBarController.swift */; };
+		01633E741EF9DE5400381B8E /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633E731EF9DE5400381B8E /* SearchTableViewController.swift */; };
+		01633E761EFA10CE00381B8E /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01633E751EFA10CE00381B8E /* LoginViewController.storyboard */; };
+		01633EC41EFC9D8400381B8E /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633EC31EFC9D8400381B8E /* AnimationHelper.swift */; };
+		01633EC61EFD66E400381B8E /* SearchableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01633EC51EFD66E400381B8E /* SearchableRecord.swift */; };
 		01B7CB311EF8626700C7504B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7CB301EF8626700C7504B /* AppDelegate.swift */; };
 		01B7CB361EF8626700C7504B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B7CB341EF8626700C7504B /* Main.storyboard */; };
 		01B7CB381EF8626700C7504B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7CB371EF8626700C7504B /* Assets.xcassets */; };
@@ -50,6 +58,14 @@
 		01633E621EF9B58700381B8E /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		01633E641EF9B63800381B8E /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
 		01633E671EF9BBA600381B8E /* ImageTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTextField.swift; sourceTree = "<group>"; };
+		01633E6B1EF9CA3F00381B8E /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		01633E6D1EF9CA7200381B8E /* UICollorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollorHelper.swift; sourceTree = "<group>"; };
+		01633E6F1EF9CCD300381B8E /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		01633E711EF9D1F300381B8E /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		01633E731EF9DE5400381B8E /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		01633E751EFA10CE00381B8E /* LoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		01633EC31EFC9D8400381B8E /* AnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
+		01633EC51EFD66E400381B8E /* SearchableRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchableRecord.swift; sourceTree = "<group>"; };
 		01B7CB2D1EF8626700C7504B /* 12AMCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 12AMCloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7CB301EF8626700C7504B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B7CB351EF8626700C7504B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				01633E271EF9722700381B8E /* CloudKitSyncable.swift */,
+				01633EC51EFD66E400381B8E /* SearchableRecord.swift */,
 			);
 			name = Protocols;
 			path = 12AMCloudKit;
@@ -102,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				01633E221EF8868500381B8E /* CloudKitManager.swift */,
+				01633E6F1EF9CCD300381B8E /* CameraController.swift */,
+				01633E711EF9D1F300381B8E /* CustomTabBarController.swift */,
 			);
 			name = "Other Controllers";
 			sourceTree = "<group>";
@@ -162,6 +181,7 @@
 				01633E581EF9B39B00381B8E /* LoginViewController.swift */,
 				01633E5A1EF9B40800381B8E /* FeedTableViewController.swift */,
 				01633E641EF9B63800381B8E /* PostDetailTableViewController.swift */,
+				01633E731EF9DE5400381B8E /* SearchTableViewController.swift */,
 				01633E5C1EF9B4E100381B8E /* CameraViewController.swift */,
 				01633E5E1EF9B50500381B8E /* CameraPreviewViewController.swift */,
 			);
@@ -186,7 +206,10 @@
 			children = (
 				01633E291EF9786200381B8E /* TimeTracker.swift */,
 				01633E2B1EF978A400381B8E /* TimerExtension.swift */,
+				01633EC31EFC9D8400381B8E /* AnimationHelper.swift */,
 				01633E671EF9BBA600381B8E /* ImageTextField.swift */,
+				01633E6D1EF9CA7200381B8E /* UICollorHelper.swift */,
+				01633E6B1EF9CA3F00381B8E /* StringExtensions.swift */,
 			);
 			name = "Helper Files";
 			path = 12AMCloudKit;
@@ -196,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				01B7CB341EF8626700C7504B /* Main.storyboard */,
+				01633E751EFA10CE00381B8E /* LoginViewController.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -278,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01B7CB3B1EF8626700C7504B /* LaunchScreen.storyboard in Resources */,
+				01633E761EFA10CE00381B8E /* LoginViewController.storyboard in Resources */,
 				01B7CB381EF8626700C7504B /* Assets.xcassets in Resources */,
 				01B7CB361EF8626700C7504B /* Main.storyboard in Resources */,
 			);
@@ -292,12 +317,17 @@
 			files = (
 				01633E1C1EF86E1D00381B8E /* Post.swift in Sources */,
 				01633E281EF9722700381B8E /* CloudKitSyncable.swift in Sources */,
+				01633E741EF9DE5400381B8E /* SearchTableViewController.swift in Sources */,
+				01633E721EF9D1F300381B8E /* CustomTabBarController.swift in Sources */,
 				01B7CB4A1EF8638900C7504B /* User.swift in Sources */,
 				01633E231EF8868500381B8E /* CloudKitManager.swift in Sources */,
+				01633E6E1EF9CA7200381B8E /* UICollorHelper.swift in Sources */,
 				01633E5F1EF9B50500381B8E /* CameraPreviewViewController.swift in Sources */,
+				01633EC41EFC9D8400381B8E /* AnimationHelper.swift in Sources */,
 				01633E5D1EF9B4E100381B8E /* CameraViewController.swift in Sources */,
 				01633E651EF9B63800381B8E /* PostDetailTableViewController.swift in Sources */,
 				01633E211EF881D200381B8E /* UserController.swift in Sources */,
+				01633E701EF9CCD300381B8E /* CameraController.swift in Sources */,
 				01633E611EF9B55E00381B8E /* CommentTableViewCell.swift in Sources */,
 				01633E2A1EF9786200381B8E /* TimeTracker.swift in Sources */,
 				01633E251EF895C300381B8E /* PostController.swift in Sources */,
@@ -305,9 +335,11 @@
 				01633E631EF9B58700381B8E /* PostTableViewCell.swift in Sources */,
 				01633E681EF9BBA600381B8E /* ImageTextField.swift in Sources */,
 				01633E2C1EF978A400381B8E /* TimerExtension.swift in Sources */,
+				01633EC61EFD66E400381B8E /* SearchableRecord.swift in Sources */,
 				01B7CB311EF8626700C7504B /* AppDelegate.swift in Sources */,
 				01633E1E1EF8731F00381B8E /* Comment.swift in Sources */,
 				01633E591EF9B39B00381B8E /* LoginViewController.swift in Sources */,
+				01633E6C1EF9CA3F00381B8E /* StringExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

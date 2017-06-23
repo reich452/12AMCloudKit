@@ -16,7 +16,7 @@ class Post: CloudKitSyncable {
     static let photoDataKey = "photoData"
     static let timestampKey = "timestamp"
     static let textKey = "text"
-    static let ownerKey = "owner"
+    static let ownerKey = "owner" // better nameing convention: creator?
     static let ownerReferenceKey = "ownerRef"
     
     let photoData: Data?
@@ -83,18 +83,22 @@ class Post: CloudKitSyncable {
 extension CKRecord {
     
     convenience init(_ post: Post) {
-        
         let recordID = post.cloudKitRecordID ?? CKRecordID(recordName: UUID().uuidString)
         self.init(recordType: post.recordType, recordID: recordID)
         self[Post.textKey] = post.text as CKRecordValue
-        self.setValue(post.text, forKey: Post.textKey)
-        self.setValue(post.timestamp, forKey: Post.timestampKey)
-        self.setValue(post.photoData, forKey: Post.photoDataKey)
+        self[Post.timestampKey] = post.timestamp as NSDate
+        self[Post.photoDataKey] = CKAsset(fileURL: post.temporaryPhotoURL)
         guard let owner = post.owner,
-            let ownerRecordID = owner.cloudKitRecordID else { return }
+            let ownerRecordID = owner.cloudKitRecordID
+            else { return }
         self[Post.ownerReferenceKey] = CKReference(recordID: ownerRecordID, action: .deleteSelf)
-        
     }
-    
+}
+
+extension Post: SearchableRecord {
+    func matches(searchTerm: String) -> Bool {
+        let matchingComments = comments.filter { $0.matches(searchTerm: searchTerm) }
+        return !matchingComments.isEmpty
+    }
 }
 

@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import CloudKit
 
-
 class User {
     
     static let usernameKey = "username"

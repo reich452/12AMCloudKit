@@ -16,7 +16,7 @@ class Comment: CloudKitSyncable {
     static let textKey = "text"
     static let timestampKey = "timestamp"
     static let postKey = "post"
-    static let postReferenceKey = "photoReference"
+    static let postReferenceKey = "postReference"
     static let ownerReferenceKey = "ownerReference"
     
     var text: String
@@ -63,5 +63,12 @@ extension CKRecord {
         self.setValue(comment.timestamp, forKey: Comment.timestampKey)
         self.setValue(post.cloudKitReference, forKey: Comment.postReferenceKey)
         self.setValue(comment.ownerReference, forKey: Comment.ownerReferenceKey)
+    }
+}
+// MARK - Protocol search
+
+extension Comment: SearchableRecord {
+    func matches(searchTerm: String) -> Bool {
+        return text.contains(searchTerm)
     }
 }
