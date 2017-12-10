@@ -17,38 +17,6 @@
             endingLineNumber = "38"
             landmarkName = "createPost(image:commentText:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "_2AMCloudKit.PostController.createPost (image : __ObjC.UIImage, commentText : Swift.String, completion : (Swift.Optional&lt;_2AMCloudKit.Post&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "12AMCloudKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Nick/Desktop/Dev%20Mountain%20Bank/12AMCloudKit/12AMproject/12AMCloudKit/PostController.swift"
-                  timestampString = "519923206.865675"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "_2AMCloudKit.PostController.createPost (image : __ObjC.UIImage, commentText : Swift.String, completion : (Swift.Optional&lt;_2AMCloudKit.Post&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "12AMCloudKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Nick/Desktop/Dev%20Mountain%20Bank/12AMCloudKit/12AMproject/12AMCloudKit/PostController.swift"
-                  timestampString = "519923206.867934"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "168">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -102,26 +70,26 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "_2AMCloudKit.PostController.createPost (image : __ObjC.UIImage, commentText : Swift.String, completion : (Swift.Optional&lt;_2AMCloudKit.Post&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "_2AMCloudKit.PostController.createPost(image: __ObjC.UIImage, commentText: Swift.String, completion: (Swift.Optional&lt;_2AMCloudKit.Post&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "12AMCloudKit"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Nick/Desktop/Dev%20Mountain%20Bank/12AMCloudKit/12AMproject/12AMCloudKit/PostController.swift"
-                  timestampString = "519923206.878888"
+                  urlString = "file:///Users/Nick/Desktop/12AMCloudKit/12AMCloudKit/PostController.swift"
+                  timestampString = "534297026.316948"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "46"
                   endingLineNumber = "46"
-                  offsetFromSymbolStart = "776">
+                  offsetFromSymbolStart = "852">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "_2AMCloudKit.PostController.(createPost (image : __ObjC.UIImage, commentText : Swift.String, completion : (Swift.Optional&lt;_2AMCloudKit.Post&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  symbolName = "closure #1 (Swift.Optional&lt;__ObjC.CKRecord&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in _2AMCloudKit.PostController.createPost(image: __ObjC.UIImage, commentText: Swift.String, completion: (Swift.Optional&lt;_2AMCloudKit.Post&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "12AMCloudKit"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Nick/Desktop/Dev%20Mountain%20Bank/12AMCloudKit/12AMproject/12AMCloudKit/PostController.swift"
-                  timestampString = "519923206.880376"
+                  urlString = "file:///Users/Nick/Desktop/12AMCloudKit/12AMCloudKit/PostController.swift"
+                  timestampString = "534297026.318242"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "48"
